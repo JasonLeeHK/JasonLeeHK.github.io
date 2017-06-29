@@ -1,64 +1,129 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href=style.css>
+
+<head>
+  
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-</style>
-<body>
-<head>
-	<link rel="stylesheet" href="./css/style.css">
-</head>
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+<!-- buttons -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About me</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Work</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Articles</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Launches</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">About me</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Work</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Articles</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Launches</a>
-  </div>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="aboutme.html">About Me</a></li>
+  <li><a href="#news">Work</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Articles</a>
+    <div class="dropdown-content">
+      <a href="#">Sports</a>
+      <a href="#">Politics and Economy</a>
+      <a href="#">Society</a>
+    </div>
+  </li> 
+  <li><a href="#news">Launches</a></li>
+</ul>
+</div>
 </div>
 
-<header class="w3-container w3-red w3-center" style="padding:100px 10px">
-  <h1 class="w3-margin w3-jumbo">About me</h1>
-  <p class="w3-xlarge">Who is Jason Lee? <p>
-
-
+<!-- Header -->
+<header class="w3-container w3-black w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-jumbo">About Me</h1>
+  <p class="w3-xlarge">A Summary of myself and what this page is about</p>
   
 </header>
-<body>
-	<div style="">
-		A South Korean native, I'm a high school student studying at Hong Kong International School. <br> Throughout my life, my international upringing helped me build a passion for entrepreneurship and journalism. <br> Furthermore, I enjoy participating in debate in events such as Forensics and MUN. <br> This year, I'm a rising junior, and I want to showcase through this website what I stand for.
+	<div style= "float: left; width: 50vw;line-height: 400%; margin-left: 20px; text-align: center;">
+		A South Korean native, I'm a high school student studying at Hong Kong International School. <br> Throughout my life, my international upringing helped me build a passion for entrepreneurship and journalism. <br> Furthermore, I enjoy participating in debate in events such as Forensics and MUN. <br> This year, I'm a rising junior, and I want to showcase the work I have done over my years in High School. </div>
+	<div style="float: left; margin-left:200px">
+		<img style= "width: 30vw" src="./img/SampleProfile.jpg" id="Profile"></img>
 	</div>
-	<div>
-		<img src="./img/SampleProfile.jpg" id="Profile"></img>
-	</div>
+<!-- Misc --> 
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
 
-	<a href="https://schoology.hkis.edu.hk/home">
-		Go to our school's home page!
-	</a>
-	<div>
-		Find me here:
-	</div>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.54833319419!2d127.02146814984874!3d37.47138483723228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca123fe16a3a9%3A0xa59adbc5eaf9c42c!2z7Jqw66m064-Z6rOg7JWE7YyM7Yq4!5e0!3m2!1sen!2skr!4v1497513593551" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/K5WxmFfIWbo" frameborder="0" allowfullscreen></iframe>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"> </i>
+ </div>
+ </footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
 </body>
 </html>
+

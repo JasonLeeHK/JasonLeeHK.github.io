@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-</style>
-<body>
 
-<!-- Navbar -->
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
+</head>
+<body>
+<!-- buttons -->
 <div class="w3-top">
   <div class="w3-bar w3-red w3-card-2 w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About me</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Work</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Articles</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Launches</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">About me</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Work</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Articles</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Launches</a>
-  </div>
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="aboutme.html">About Me</a></li>
+  <li><a href="#news">Work</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Articles</a>
+    <div class="dropdown-content">
+      <a href="#">Sports</a>
+      <a href="#">Politics and Economy</a>
+      <a href="#">Society</a>
+    </div>
+  </li> 
+  <li><a href="#news">Launches</a></li>
+</ul>
+</div>
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+<header class="w3-container w3-black w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Jason Lee</h1>
   <p class="w3-xlarge">Who I am and What I stand for</p>
   
@@ -47,12 +98,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-twothird">
       <h1>About me</h1>
       <h5 class="w3-padding-32">A South Korean native, I'm a high school student studying at Hong Kong International School. Throughout my life, my international upringing helped me build a passion for entrepreneurship and journalism.</h5>
+      <a href="./aboutme.html">
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Learn more about me</button>
+    </a>
     </div>
 
 
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Learn more about me</button>
 
 
     </div>
@@ -63,16 +115,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
-      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
     </div>
+
 
     <div class="w3-twothird">
       <h1>Work</h1>
       <h5 class="w3-padding-32"> My work revolves around entrepreneurship, journalism, debate, and international relations. Whether it is through extracirricular activities, summer internships, or competitions, I have fostered a deep interest and passsion for these areas. </h5>
-
-     
-    </div>
-        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Learn more about what I do </button>
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Learn more about what I do </button>
+     </div>
 
   </div>
 </div>
@@ -83,20 +133,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-twothird">
       <h1>Articles</h1>
       <h5 class="w3-padding-32">Journalism is what informs people about the world, sparks conversation on pressing issues, and is thus an integral part of today's society. I write editorials providing my insight on topics of interest. I'll discuss the politics and economy of countries around the world, question societal norms, shed light on the implications of current events, and provide analytical insight on sports.</h5>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Read my articles</button>
+
     </div>
 
 
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Read my articles</button>
-
 
     </div>
   </div>
 </div>
 
-
-
+<!-- Misc --> 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
@@ -106,7 +154,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <i class="fa fa-snapchat w3-hover-opacity"></i>
     <i class="fa fa-pinterest-p w3-hover-opacity"></i>
     <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"> </i>
  </div>
  </footer>
 
