@@ -6,3 +6,11 @@ body{
 	color:#000000;
 	line-height: 400%;
 }
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
+.default-window {
+    min-height: 0px;
+    background: transparent;
+}
