@@ -18,7 +18,5 @@ $('.fade').slick({
   cssEase: 'linear'
 });
 
-
-
 		
 });

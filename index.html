@@ -23,7 +23,6 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -31,11 +30,9 @@ ul {
     overflow: hidden;
     background-color: #333;
 }
-
 li {
     float: left;
 }
-
 li a, .dropbtn {
     display: inline-block;
     color: white;
@@ -43,15 +40,12 @@ li a, .dropbtn {
     padding: 14px 16px;
     text-decoration: none;
 }
-
 li a:hover, .dropdown:hover .dropbtn {
     background-color: grey;
 }
-
 li.dropdown {
     display: inline-block;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -60,7 +54,6 @@ li.dropdown {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -68,9 +61,7 @@ li.dropdown {
     display: block;
     text-align: left;
 }
-
 .dropdown-content a:hover {background-color: #f1f1f1}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -86,12 +77,16 @@ li.dropdown {
   <li><a href="index.html">Home</a></li>
   <li><a href="aboutme.html">About Me</a></li>
   <li><a href="work.html">Work</a></li>
-  <li><a href="work.html">Articles</a></li>
   <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Articles</a>
+    <div class="dropdown-content">
+      <a href="https://inqhk.com/">INQ</a>
+      <a href="https://baseballanalysis.wordpress.com/">Baseball Analytics</a>
+    </div>  <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Launches</a>
     <div class="dropdown-content">
-      <a href="#">Glove4Kids</a>
-      <a href="#">WCManager</a>
+      <a href="#">NA</a>
+      <a href="#">NA</a>
     </div>
   </li> 
   <li><a href="contactme.html">Contact Me</a></li>
@@ -205,8 +200,6 @@ function myFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
-
-
 </script>
 
                 
